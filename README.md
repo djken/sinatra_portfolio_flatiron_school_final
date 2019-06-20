@@ -6,7 +6,7 @@ E-Schedule is an application built using Sinatra Framework. It is an application
 
 1. User Sign Up and Login authentification.
 
-Every single user who registers will be able to manage his or her own account independently, e.i, any other user won’t have access to view your information.
+    Every single user who registers will be able to manage his or her own account independently, e.i, any other user won’t have access to view your information.
 
 2. Every single user will be able to Create, Read, modify and Update, and also delete meetings. And, the same thing is true for a registered birthday.
 
