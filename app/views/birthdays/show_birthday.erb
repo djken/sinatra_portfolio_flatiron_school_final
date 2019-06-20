@@ -1,0 +1,58 @@
+<div id="container-birth">
+  <div id="banner-birth">
+    <h1>E-SCHEDULE</h1>
+    <p>Keep Tack of your Activities</p>
+  </div>
+
+  <!-- Begin Top Menu -->
+  <ul id="navlist-birth">
+    <li id="active-birth"><a id="current-birth" href="/meetings">ADD MEETING</a></li>
+    <li><a href="/birthdays">BIRTHDAYS</a></li>
+    <li><a href="/birthdays">NOTES</a></li>
+    <li><a href="/logout">SIGN OUT</a></li>
+  </ul>
+
+  <!-- End Top Menu -->
+
+  <div id="sidebar-birth-a" >
+    <h2>Activities</h2>
+    <div class="menu-birth">
+      <ul>
+        <li><a href="/meetings">Meeting</a></li>
+        <li><a href="/birthdays">Birthday</a></li>
+        <li><a href="#">Notes</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <div id="content-birth">
+        <h2 id="birthday"> birthdays </h2>
+        <table class="table-birth">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Firstname</td>
+                    <td>Lastname</td>
+                    <td>Phone Number</td>
+                    <td>Relationship</td>
+                    <td>Birthday</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p><%= @birthday.id %></p></td>
+                    <td><p><%= @birthday.firstname %></p></td>
+                    <td><p><%= @birthday.lastname %></p></td>
+                    <td><p><%= @birthday.phone_number %></p></td>
+                    <td><p><%= @birthday.relationship %></p></td>
+                    <td><p><%= @birthday.birthday %></p></td>
+                </tr>
+            </tbody>
+        </table>
+          <div class="btn" >
+              <a id="btn-activity"  href="/birthdays">See all Birthdays</a>
+          </div>
+        </div>
+        
+</div>
+ 

@@ -1,0 +1,19 @@
+<div class="create-meet-a">
+   <h2 id="add-meeting">Edit a Meeting</h2>
+
+ <div class="create-meet-b">
+    <form method="POST" action="/meetings/<%=@meeting.id%>">
+      <input id="hidden" type="hidden" name="_method" value="PATCH">
+      <p>Firstname:<input type="text" name="firstname" required value="<%=@meeting.firstname%>"></p>
+      <p>Lastname:<input type="text" name="lastname" required value="<%=@meeting.lastname%>"></p>
+      <p>Address:<input type="text" name="address" required value="<%=@meeting.address%>"></p>
+      <p>Phone Number:<input type="text" name="phone_number" required value="<%= @meeting.phone_number%>"></p>
+      <p>Description:<input type="text" name="description" required value="<%= @meeting.description%>"></p>
+      <p>Schedule:</p>
+      <div>
+       <p><input type="date" name="schedule" required value="<%=@meeting.schedule%>"></p>
+      </div>
+      <input type="submit" value="Update">
+  </form>
+ </div>
+</div>

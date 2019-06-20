@@ -1,0 +1,18 @@
+<div class="create-birth-a">
+   <h2 id="add-birthday">Edit a Meeting</h2>
+
+ <div class="create-meet-b">
+    <form method="POST" action="/birthdays/<%=@birthday.id%>">
+      <input id="hidden" type="hidden" name="_method" value="PATCH">
+      <p>Firstname:<input type="text" name="firstname" required value="<%=@birthday.firstname%>"></p>
+      <p>Lastname:<input type="text" name="lastname" required value="<%=@birthday.lastname%>"></p>
+      <p>Phone Number:<input type="text" name="phone_number" required value="<%= @birthday.phone_number%>"></p>
+      <p>Relationship:<input type="text" name="relationship" required value="<%= @birthday.relationship%>"></p>
+      <p>Birthday:</p>
+      <div>
+       <p><input type="date" name="birthday" required value="<%=@birthday.birthday%>"></p>
+      </div>
+      <input type="submit" value="Update">
+  </form>
+ </div>
+</div>

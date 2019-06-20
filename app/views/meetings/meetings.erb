@@ -1,0 +1,75 @@
+<div id="container-d">
+  <div id="banner">
+    <h1 id="title-a">E-SCHEDULE</h1>
+    <p>Keep Tack of your Activities</p>
+  </div>
+
+  <!-- Begin Top Menu -->
+   <div class="name">
+      <h3 class="name">Hello <%= current_user.username %></h3>
+  </div>
+
+  <ul id="navlist">
+    <li id="active"><a id="current" href="/meetings/new">ADD MEETING</a></li>
+    <li><a href="/birthdays/new">ADD BIRTHDAY</a></li>
+    <li><a href="#">TAKE NOTES</a></li>
+    <li><a href="/logout">SIGN OUT</a></li>
+  </ul>
+
+  <!-- End Top Menu -->
+  <div id="sidebar-a" >
+    <h2>Activities</h2>
+    <div class="menu">
+      <ul>
+        <li><a href="/meetings">Meeting</a></li>
+        <li><a href="/birthdays">Birthday</a></li>
+        <li><a href="#">Notes</a></li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div id="sidebar-b">
+    <h3>Information</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse a tortor. Pellentesque sollicitudin, ante nec posuere tempus, arcu lectus vehicula mi, ac rhoncus lorem turpis sed sapien. Pellentesque egestas. Ut eros massa, dignissim at, auctor vitae, consectetuer ut, felis. Ut tincidunt sem in ipsum. </p>
+  </div>
+
+  <div id="content">
+     <h2 id="meeting"> Meetings </h2>
+     <table class="table">
+        <thead id="head-b">
+            <tr>
+                <td>Sc</td>
+                <td>Firstname</td>
+                <td>Lastname</td>
+                <td>Address</td>
+                <td>Phone Number</td>
+                <td>Schedule</td>
+                <td>Description</td>
+                <td>Modify</td>
+                <td>Remove</td>
+            </tr>
+        </thead>
+        <tbody id="body-a"> 
+            <% @meetings.each.with_index(1) do |meeting, index| %>
+            <tr>
+                <td><%= index %></td>
+                <td><%= meeting.firstname %></td>
+                <td><%= meeting.lastname %></td>
+                <td><%= meeting.address %></td>
+                <td><%= meeting.phone_number %></td>
+                <td><%= meeting.schedule %></td>
+                <td><%= meeting.description %></td>
+                <td><a href="/meetings/<%= meeting.id %>/edit">Edit Meeting </a></td>
+                <td>
+                  <form onsubmit=" return confirm('Are you sure you want to delete this meeting?')" method="post" action="/meetings/<%=meeting.id%>/delete">
+                    <input id="hidden" type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="Delete Meeting">
+                  </form>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+    </div>
+</div>

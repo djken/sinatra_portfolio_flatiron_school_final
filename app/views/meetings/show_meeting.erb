@@ -1,0 +1,60 @@
+<div id="container-e">
+  <div id="banner">
+    <h1>E-SCHEDULE</h1>
+    <p>Keep Tack of your Activities</p>
+  </div>
+
+  <!-- Begin Top Menu -->
+  <ul id="navlist">
+    <li id="active"><a id="current" href="/meetings">ACTIVITIES</a></li>
+    <li><a href="/birthdays">BIRTHDAYS</a></li>
+    <li><a href="/meetings">NOTES</a></li>
+    <li><a href="/logout">SIGN OUT</a></li>
+  </ul>
+
+  <!-- End Top Menu -->
+
+  <div id="sidebar-a" >
+    <h2>Activities</h2>
+    <div class="menu">
+      <ul>
+        <li><a href="/meetings">Meeting</a></li>
+        <li><a href="/birthdays">Birthday</a></li>
+        <li><a href="#">Notes</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <div id="content">
+      <h2 id="meeting"> Meetings </h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Firstname</td>
+                    <td>Lastname</td>
+                    <td>Address</td>
+                    <td>Phone Number</td>
+                    <td>Schedule</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p><%= @meeting.id %></p></td>
+                    <td><p><%= @meeting.firstname %></p></td>
+                    <td><p><%= @meeting.lastname %></p></td>
+                    <td><p><%= @meeting.address %></p></td>
+                    <td><p><%= @meeting.phone_number %></p></td>
+                    <td><p><%= @meeting.schedule %></p></td>
+                    <td><p><%= @meeting.description %></p></td>
+                </tr>
+            </tbody>
+        </table>
+          <div class="btn" >
+              <a id="btn-activity"  href="/meetings">See All the Meetings</a>
+          </div>
+        </div>
+        
+</div>
+ 
